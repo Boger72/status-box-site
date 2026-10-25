@@ -321,3 +321,15 @@ p { margin: 0 0 16px; }
   border-radius: 12px;
   margin: 8px 0 12px;
 }
+
+/* ===== Шапка: большой логотип и название фонда в две строки ===== */
+.logo__img { height: 120px; width: auto; border-radius: 0; }
+.logo { gap: 18px; }
+.logo__text { display: flex; flex-direction: column; line-height: 1.15; }
+.logo__line1 { font-size: 18px; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+.logo__line2 { font-size: 34px; font-weight: 800; color: var(--text); letter-spacing: 1px; }
+@media (max-width: 640px) {
+  .logo__img { height: 80px; }
+  .logo__line1 { font-size: 14px; }
+  .logo__line2 { font-size: 24px; }
+}
