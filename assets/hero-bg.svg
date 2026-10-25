@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Тёмный деловой фон -->
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0c0e"/>
+      <stop offset="1" stop-color="#16181c"/>
+    </linearGradient>
+    <!-- Мягкий свет сверху, как прожектор над рингом -->
+    <radialGradient id="spot" cx="0.62" cy="0.0" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Пол ринга -->
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e2126" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#1e2126" stop-opacity="0.9"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0 L0 0 0 80" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <!-- основа и свет -->
+  <rect width="1920" height="1080" fill="url(#base)"/>
+  <rect width="1920" height="1080" fill="url(#spot)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+
+  <!-- ринг в перспективе: пол и канаты -->
+  <polygon points="1000,1080 1920,1080 1920,560 1260,560" fill="url(#floor)"/>
+
+  <!-- канаты: левая и правая стороны, по три на сторону -->
+  <g fill="none" stroke-linecap="round">
+    <!-- правая сторона -->
+    <path d="M1260 560 L1920 470" stroke="#b3282a" stroke-width="5" opacity="0.55"/>
+    <path d="M1260 600 L1920 520" stroke="#e8e8ea" stroke-width="4" opacity="0.22"/>
+    <path d="M1260 640 L1920 570" stroke="#b3282a" stroke-width="4" opacity="0.35"/>
+    <!-- нижняя сторона -->
+    <path d="M1000 1080 L1260 560" stroke="#e8e8ea" stroke-width="3" opacity="0.14"/>
+    <path d="M1400 1080 L1500 560" stroke="#e8e8ea" stroke-width="2" opacity="0.08"/>
+  </g>
+
+  <!-- угловые стойки -->
+  <rect x="1244" y="520" width="12" height="90" fill="#2a2d33" opacity="0.8"/>
+  <rect x="1900" y="430" width="12" height="150" fill="#2a2d33" opacity="0.8"/>
+
+  <!-- красная полоса сверху: акцент фонда -->
+  <rect x="0" y="0" width="1920" height="4" fill="#d62828"/>
+</svg>
