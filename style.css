@@ -333,3 +333,92 @@ p { margin: 0 0 16px; }
   .logo__line1 { font-size: 14px; }
   .logo__line2 { font-size: 24px; }
 }
+/* ===== Версия 3: картинки, иконки, понятная структура ===== */
+
+/* Кнопка в шапке */
+.menu { align-items: center; }
+.btn--small { padding: 9px 18px; font-size: 14px; border-width: 2px; }
+.menu .btn--small { color: #fff; }
+.menu .btn--small:hover { color: #fff; }
+
+/* Блок «О фонде»: баннер и заголовок */
+.banner {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 32px;
+  border: 1px solid var(--line);
+}
+.fund__title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; margin: 8px 0 16px; line-height: 1.15; }
+.fund__lead { font-size: 19px; color: var(--muted); max-width: 760px; }
+
+/* Иконки на карточках */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(214, 40, 40, 0.14);
+  margin-bottom: 16px;
+}
+.icon svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Карточки-ссылки */
+.card--link { display: block; color: var(--text); transition: transform 0.15s, border-color 0.15s; }
+.card--link:hover { transform: translateY(-3px); border-color: var(--accent); text-decoration: none; }
+.card__more { color: var(--accent); font-weight: 700; }
+.lead { color: var(--muted); font-size: 18px; margin-bottom: 28px; }
+
+/* Расходы: три крупные цифры */
+.rules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.rule {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+  border-left: 4px solid var(--accent);
+}
+.rule__num { font-size: 40px; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 10px; }
+.rule p { margin: 0; color: var(--muted); }
+
+/* Управление: компактные карточки */
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.person {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+.person h3 { font-size: 18px; margin-bottom: 8px; }
+.person p { margin-bottom: 6px; }
+
+/* Подвал: без мёртвых ссылок */
+.foot p { margin-bottom: 8px; }
+@media (max-width: 640px) {
+  .banner { height: 180px; }
+  .menu .btn--small { padding: 7px 14px; }
+}
+.block--tight { padding: 48px 0 24px; }
+.banner--small { height: 170px; }

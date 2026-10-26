@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="light" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#d62828" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#d62828" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2d33"/>
+      <stop offset="100%" stop-color="#15171b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" fill="#0b0c0e"/>
+  <ellipse cx="600" cy="0" rx="700" ry="420" fill="url(#light)"/>
+  <polygon points="520,0 680,0 900,420 300,420" fill="#ffffff" opacity="0.04"/>
+  <polygon points="250,400 950,400 1060,330 140,330" fill="url(#floor)" stroke="#3a3e47" stroke-width="2"/>
+  <line x1="140" y1="330" x2="140" y2="170" stroke="#f4f4f5" stroke-width="8"/>
+  <line x1="1060" y1="330" x2="1060" y2="170" stroke="#f4f4f5" stroke-width="8"/>
+  <g fill="none" stroke-width="7" stroke-linecap="round">
+    <path d="M140 230 Q600 300 1060 230" stroke="#d62828"/>
+    <path d="M140 200 Q600 270 1060 200" stroke="#f4f4f5"/>
+    <path d="M140 170 Q600 240 1060 170" stroke="#d62828"/>
+  </g>
+  <circle cx="600" cy="60" r="10" fill="#ffffff" opacity="0.7"/>
+  <text x="600" y="470" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#b4b7bf">Ринг · Тюмень</text>
+</svg>
